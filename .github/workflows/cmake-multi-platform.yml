@@ -32,10 +32,10 @@ jobs:
       cmake --build _build
  
   - name: Test if worker.cpp actually present
-    run: ./_build/worker
+    run: ./_build/work
 
   - name: Make artifact from compiled main
     uses: actions/upload-artifact@v4
     with:
       name: compiled_worker_cpp
-      path: _build/worker
+      path: _build/work
