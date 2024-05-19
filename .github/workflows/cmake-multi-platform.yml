@@ -25,3 +25,17 @@ jobs:
 
   - name: Run tests
     run: build/check
+
+  - name: Build for worker.cpp
+    run: |
+      cmake -H. -B_build -DBUILD_WORKER=ON
+      cmake --build _build
+ 
+  - name: Test if worker.cpp actually present
+    run: ./_build/worker
+
+  - name: Make artifact from compiled main
+    uses: actions/upload-artifact@v4
+    with:
+      name: compiled_worker_cpp
+      path: _build/worker

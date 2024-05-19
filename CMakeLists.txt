@@ -17,3 +17,9 @@ if(BUILD_TESTS)
   target_link_libraries(check worker gtest_main)
   add_test(NAME check COMMAND check)
 endif()
+
+if(BUILD_WORKER)
+    add_executable(worker ${CMAKE_CURRENT_SOURCE_DIR}/worker.cpp)
+    install(TARGETS main RUNTIME DESTINATION bin)
+endif()
+
