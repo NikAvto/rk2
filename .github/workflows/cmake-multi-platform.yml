@@ -14,6 +14,3 @@ jobs:
           cmake -H. -B_build -DBUILD_TESTS=ON
           cmake --build _build
           cmake --build _build --target test -- ARGS=--verbose
-        with:
-          excludes: third-party
-          github-token: ${{ secrets.GITHUB_TOKEN }}
