@@ -77,10 +77,3 @@ TEST(WorkerTest, God)
     std::string output = testing::internal::GetCapturedStdout();
     EXPECT_NE(output.find("[God] God can do anything"), std::string::npos);
 }
-
-int main(int argc, char **argv)
-{
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
-
