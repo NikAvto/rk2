@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "worker.h" // Assuming the program is in worker.h
+#include "worker.cpp" // Assuming the program is in worker.h
 
 TEST(WorkerTest, CustomerSupporter)
 {
