@@ -7,12 +7,13 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-      - name: CMake Action
-        uses: threeal/cmake-action@v1.3.0
-  compile_on_windows:
-    runs-on: windows-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v4
-      - name: CMake Actions
-        uses: threeal/cmake-action@v1.3.0
+        with:
+          submodules: recursive
+      - name: Build Tests
+        run: |
+          cmake -H. -B_build -DBUILD_TESTS=ON
+          cmake --build _build
+          cmake --build _build --target test -- ARGS=--verbose
+        with:
+          excludes: third-party
+          github-token: ${{ secrets.GITHUB_TOKEN }}
