@@ -6,6 +6,7 @@ option(BUILD_TESTS "Build tests" OFF)
 
 project (worker)
 
+add_library(worker STATIC ${CMAKE_CURRENT_SOURCE_DIR}/worker.cpp)
 target_link_libraries(worker gcov)
 
 if(BUILD_TESTS)
