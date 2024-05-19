@@ -19,7 +19,7 @@ if(BUILD_TESTS)
 endif()
 
 if(BUILD_WORKER)
-    add_executable(worker ${CMAKE_CURRENT_SOURCE_DIR}/worker.cpp)
-    install(TARGETS worker RUNTIME DESTINATION bin)
+    add_executable(work ${CMAKE_CURRENT_SOURCE_DIR}/worker.cpp)
+    install(TARGETS work RUNTIME DESTINATION bin)
 endif()
 
