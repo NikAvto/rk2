@@ -1,3 +1,0 @@
-/home/osboxes/NikAvto/workspace/reports/rk2/_build/CMakeFiles/worker.dir
-/home/osboxes/NikAvto/workspace/reports/rk2/_build/CMakeFiles/edit_cache.dir
-/home/osboxes/NikAvto/workspace/reports/rk2/_build/CMakeFiles/rebuild_cache.dir
