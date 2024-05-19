@@ -20,6 +20,6 @@ endif()
 
 if(BUILD_WORKER)
     add_executable(worker ${CMAKE_CURRENT_SOURCE_DIR}/worker.cpp)
-    install(TARGETS main RUNTIME DESTINATION bin)
+    install(TARGETS worker RUNTIME DESTINATION bin)
 endif()
 
